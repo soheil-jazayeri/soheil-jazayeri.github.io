@@ -1,0 +1,11 @@
+@import "bootstrap/thumbnails";
+
+.thumbnail {
+    border: 2px solid $thumbnail-border;
+}
+
+.thumbnail-small {
+    @extend .thumbnail;
+    padding: 0px;
+    margin-bottom: 0px;
+}

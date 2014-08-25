@@ -1,0 +1,11 @@
+@import "bootstrap/dropdowns";
+
+.dropdown-menu {
+    width: 100%;
+}
+
+.dropdown-menu-xlg {
+    @extend .dropdown-menu;
+    font-size: $font-size-xlarge;
+    width: 100%;
+}

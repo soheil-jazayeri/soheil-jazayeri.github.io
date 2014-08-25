@@ -1,0 +1,53 @@
+@import "bootstrap/navbar";
+
+.navbar {
+    margin-bottom: 0px;
+    position: fixed !important;
+}
+
+.navbar-brand {
+    font-size: $font-size-xxxlarge;
+}
+
+.navbar-default {
+    .navbar-brand {
+        color: $navbar-inverse-brand-color;
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+            //            color: $navbar-inverse-brand-hover-color;
+            //            background-color: $navbar-inverse-brand-hover-bg;
+
+        }
+    }
+    .navbar-nav {
+        > li > a {
+            &:hover,
+            &:focus {
+                //                color: $navbar-inverse-link-hover-color;
+                background-color: $navbar-inverse-link-hover-bg;
+                text-decoration: underline;
+            }
+        }
+        > .active > a {
+            &,
+            &:hover,
+            &:focus {
+                //                color: $navbar-inverse-link-active-color;
+                font-weight: bold;
+                border-color: #000;
+                border: none;
+                color: $navbar-inverse-link-disabled-color;
+                background-color: $navbar-inverse-link-disabled-bg;
+                background-image: url($navbar-inverse-active-bg-image);
+                background-position: center bottom;
+                background-repeat: no-repeat;
+            }
+        }
+        > .disabled > a {
+            &,
+            &:hover,
+            &:focus {}
+        }
+    }
+}

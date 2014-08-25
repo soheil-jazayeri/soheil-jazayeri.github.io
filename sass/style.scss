@@ -1,0 +1,259 @@
+@import "bootstrap";
+@import "SassMQ/mq";
+
+@import "fontawesome/font-awesome";
+
+$mq-responsive: true;
+$mq-show-breakpoints: mobile, mobileLandscape, tablet, desktop, wide;
+
+/* make sidebar nav vertical */
+@media (min-width: 768px) {
+    .sidebar-nav .navbar .navbar-collapse {
+        padding: 0;
+        max-height: none;
+    }
+    .sidebar-nav .navbar ul {
+        float: none;
+    }
+    .sidebar-nav .navbar ul:not {
+        display: block;
+    }
+    .sidebar-nav .navbar li {
+        float: none;
+        display: block;
+    }
+    .sidebar-nav .navbar li a {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}
+
+.btn .caret {
+    margin-left: 20px;
+}
+
+.col-middle {
+    @include mq($to: $screen-xs-max) {
+        width: percentage(1 / 12);
+    }
+
+    @include mq($from: $screen-sm-min) {
+        width: percentage(2 / 12);
+    }
+}
+
+.col-xs-4 {
+    @include mq($to: $screen-xs-max) {
+        padding-left: $grid-gutter-width / 2 - 5;
+        padding-right: $grid-gutter-width / 2 - 5;
+    }
+
+    @include mq($from: $screen-sm-min) {
+        padding-left: $grid-gutter-width;
+        padding-right: $grid-gutter-width;
+    }
+}
+
+.divider {
+    border-bottom: 1px solid $table-border-color;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.fa-4x {
+    @include mq($to: $screen-xs-max) {
+        font-size: $font-4x-screen-xs-min;
+    }
+
+    @include mq($from: $screen-sm-min) {
+        font-size: $font-4x-screen-sm-min;
+    }
+
+    @include mq($from: $screen-md-min) {
+        font-size: $font-4x-screen-md-min;
+    }
+
+    @include mq($from: $screen-lg-min) {
+        font-size: $font-4x-screen-lg-min;
+    }
+}
+
+.fa-5x {
+    @include mq($to: $screen-xs-max) {
+        font-size: $font-5x-screen-xs-min;
+    }
+
+    @include mq($from: $screen-sm-min) {
+        font-size: $font-5x-screen-sm-min;
+    }
+
+    @include mq($from: $screen-md-min) {
+        font-size: $font-5x-screen-md-min;
+    }
+
+    @include mq($from: $screen-lg-min) {
+        font-size: $font-5x-screen-lg-min;
+    }
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.empty-column {
+    @include mq($to: $screen-xs-max) {
+        display: none;
+    }
+
+    @include mq($from: $screen-sm-min) {
+        display: table-cell;
+    }
+}
+
+.h-right-divider {
+    border-right: 1px solid;
+    border-color: $thumbnail-border;
+}
+
+.inlinesparkline {
+    height: $inlinesparkline-small-height;
+    width: $inlinesparkline-small-width;
+}
+
+.inlinesparkline-best > .canvas {
+    lineColor: $inline-sparkline-best-line-color;
+    fillColor: red;
+    //$inline-sparkline-best-fill-color;
+}
+
+.inlinesparkline-worst {
+    lineColor: $inline-sparkline-worst-line-color;
+    fillColor: $inline-sparkline-worst-fill-color;
+}
+
+.jqstooltip {
+    box-sizing: content-box;
+}
+
+.link-regular {
+    color: $link-regular-color;
+    i {
+        padding-top: 2px;
+        padding-right: 1px;
+        padding-left: 1px;
+    }
+}
+
+.link-regular > i {}
+
+.row-fluid {
+    //    margin-left: 10%;
+    //    margin-left: 10%;
+}
+
+.shadow {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.spacer20 {
+    @include mq($to: $screen-xs-max) {
+        margin-bottom: $spacer20-bottom-screen-xs-min;
+    }
+
+    @include mq($from: $screen-sm-min) {
+        margin-bottom: $spacer20-bottom-screen-sm-min;
+    }
+
+    @include mq($from: $screen-md-min) {
+        margin-bottom: $spacer20-bottom-screen-md-min;
+    }
+
+    @include mq($from: $screen-lg-min) {
+        margin-bottom: $spacer20-bottom-screen-lg-min;
+    }
+}
+
+.spacer5 {
+    @include mq($to: $screen-xs-max) {
+        margin-bottom: $spacer5-bottom-screen-xs-min;
+    }
+
+    @include mq($from: $screen-sm-min) {
+        margin-bottom: $spacer5-bottom-screen-sm-min;
+    }
+
+    @include mq($from: $screen-md-min) {
+        margin-bottom: $spacer5-bottom-screen-md-min;
+    }
+
+    @include mq($from: $screen-lg-min) {
+        margin-bottom: $spacer5-bottom-screen-lg-min;
+    }
+}
+
+.thumbnail {
+    @include mq($to: $screen-xs-max) {
+        margin-bottom: $line-height-small;
+    }
+
+    @include mq($from: $screen-sm-min) {
+        margin-bottom: $line-height-computed;
+    }
+}
+
+.thumbnail img {
+    @include mq($to: $screen-xs-max) {
+        min-height: $thumbnail-height-xs;
+        height: $thumbnail-height-xs;
+        //        margin-bottom: $line-height-small;
+    }
+
+    @include mq($from: $screen-sm-min) {
+        min-height: $thumbnail-height-sm;
+        height: $thumbnail-height-sm;
+        //        margin-bottom: $line-height-computed;
+    }
+
+    @include mq($from: $screen-md-min) {
+        min-height: $thumbnail-height-md;
+        height: $thumbnail-height-md;
+    }
+
+    @include mq($from: $screen-lg-min) {
+        min-height: $thumbnail-height-lg;
+        height: $thumbnail-height-lg;
+    }
+}
+
+.thumbnail-small {
+    @include mq($to: $screen-xs-max) {
+        margin-bottom: 0px;
+    }
+
+    @include mq($from: $screen-sm-min) {
+        margin-bottom: 0px;
+    }
+}
+
+.thumbnail-small img {
+    min-height: $thumbnail-small-height;
+    height: $thumbnail-small-height;
+    min-width: $thumbnail-small-width;
+    width: $thumbnail-small-width;
+}
+
+.vcenter {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+
+.v-top-divider {
+    border-top: 1px solid;
+    border-color: $thumbnail-border;
+}
