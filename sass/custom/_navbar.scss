@@ -34,14 +34,15 @@
             &:hover,
             &:focus {
                 //                color: $navbar-inverse-link-active-color;
-                font-weight: bold;
-                border-color: #000;
-                border: none;
-                color: $navbar-inverse-link-disabled-color;
-                background-color: $navbar-inverse-link-disabled-bg;
-                background-image: url($navbar-inverse-active-bg-image);
-                background-position: center bottom;
-                background-repeat: no-repeat;
+                //                font-weight: bold;
+                //                border-color: #000;
+                //                border: none;
+                //                color: $navbar-inverse-link-disabled-color;
+                                background-color: $navbar-inverse-link-disabled-bg;
+                                background-image: url($navbar-inverse-active-bg-image);
+                                background-position: center bottom;
+                                background-repeat: no-repeat;
+
             }
         }
         > .disabled > a {
