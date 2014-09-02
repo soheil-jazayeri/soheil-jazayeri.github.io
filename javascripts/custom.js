@@ -107,23 +107,23 @@ $(document).ready(function () {
     });
     //Sparkline JavaScript
 
-    $(function () {
-        $('.inlinesparkline-worst').sparkline('html', {
-            type: 'line',
-            height: '37px',
-            width: '200px',
-            lineColor: '#bbb',
-            fillColor: 'rgba(255, 0, 64,0.70)'
-        });
-    });
-
-    $(function () {
-        $('.inlinesparkline-best').sparkline('html', {
-            type: 'line',
-            height: '37px',
-            width: '200px',
-            lineColor: '#bbb',
-            fillColor: 'rgba(00, 255, 64,0.70)'
-        });
-    });
+//    $(function () {
+          //        $('.inlinesparkline-worst').sparkline('html', {
+          //            type: 'line',
+          //            height: '37px',
+          //            width: '200px',
+          //            lineColor: '#bbb',
+          //            fillColor: 'rgba(255, 0, 64,0.70)'
+          //        });
+          //    });
+          //
+          //    $(function () {
+          //        $('.inlinesparkline-best').sparkline('html', {
+          //            type: 'line',
+          //            height: '37px',
+          //            width: '200px',
+          //            lineColor: '#bbb',
+          //            fillColor: 'rgba(00, 255, 64,0.70)'
+          //        });
+          //    });
 });

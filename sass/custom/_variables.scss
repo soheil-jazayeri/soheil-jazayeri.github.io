@@ -1,100 +1,61 @@
-@import "bootstrap/variables";
+@import "bootstrap/navbar";
 
-$black: black;
-$font-size-xxxlarge: ceil($font-size-base * 2) !default;
+.navbar {
+    margin-bottom: 0px;
+    //    position: fixed !important;
+    border: 0px;
+}
 
-//$font-size-base: 16px !default;
+.navbar-brand {
+    font-size: $font-size-xxxlarge;
+}
 
-$navbar-default-bg: transparent;
-$navbar-default-border: transparent;
+.nav-collapse {
+    padding-top: 1em;
+}
 
-// ~28px
-$font-size-xlarge: ceil($font-size-base * 1.5) !default;
+.navbar-default {
+    .navbar-collapse {
+        padding-left: 0px;
+    }
+    .navbar-brand {
+        color: $navbar-inverse-brand-color;
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+            //            color: $navbar-inverse-brand-hover-color;
+            //            background-color: $navbar-inverse-brand-hover-bg;
 
-// ~21px
+        }
+    }
+    .nav-stacked {
+        > li > a {
+            color: $navbar-inverse-brand-color;
+            &:hover,
+            &:focus {
+                background-color: $navbar-inverse-link-hover-bg;
+                text-decoration: underline;
+            }
+        }
+        > .active > a {
+            &,
+            &:hover,
+            &:focus {
+                //                color: $navbar-inverse-link-active-color;
+                //                font-weight: bold;
+                //                border-color: #000;
+                //                border: none;
+                //                color: $navbar-inverse-link-disabled-color;
+                //                background-color: $navbar-inverse-link-disabled-bg;
+                //                background-position: center bottom;
+                //                background-repeat: no-repeat;
 
-$font-size-xxlarge: ceil($font-size-base * 1.8) !default;
-
-//~25px
-
-$font-5x-screen-lg-min: 5em;
-$font-4x-screen-lg-min: 4em;
-$font-5x-screen-md-min: 4em;
-$font-4x-screen-md-min: 3em;
-$font-5x-screen-sm-min: 3em;
-$font-4x-screen-sm-min: 2em;
-$font-5x-screen-xs-min: 1em;
-$font-4x-screen-xs-min: 0.6em;
-
-$headings-color: $brand-primary;
-
-$line-height-small: 2px;
-
-$spacer20-bottom-screen-lg-min: 20px;
-$spacer20-left-screen-lg-min: 20px;
-$spacer20-bottom-screen-md-min: 15px;
-$spacer20-left-screen-md-min: 15px;
-$spacer20-bottom-screen-sm-min: 10px;
-$spacer20-left-screen-sm-min: 10px;
-$spacer20-bottom-screen-xs-min: 1px;
-$spacer20-left-screen-xs-min: 2px;
-
-$spacer5-bottom-screen-lg-min: 5px;
-$spacer5-left-screen-lg-min: 5px;
-$spacer5-bottom-screen-md-min: 4x;
-$spacer5-left-screen-md-min: 4px;
-$spacer5-bottom-screen-sm-min: 3px;
-$spacer5-left-screen-sm-min: 3px;
-$spacer5-bottom-screen-xs-min: 1px;
-$spacer5-left-screen-xs-min: 1px;
-
-$thumbnail-height-lg: 270px;
-$thumbnail-height-md: 200px;
-$thumbnail-height-sm: 140px;
-$thumbnail-height-xs: 80px;
-
-$thumbnail-small-height: 37px;
-$thumbnail-small-width: 37px;
-
-$inlinesparkline-small-height: $thumbnail-small-height;
-$inlinesparkline-small-width: 3 * $thumbnail-small-height;
-
-$inline-sparkline-best-line-color: #04ff00;
-$inline-sparkline-best-fill-color: #00ff2e;
-
-$inline-sparkline-worst-line-color: #f00000;
-$inline-sparkline-worst-fill-color: #fc1414;
-
-$link-regular-color: $thumbnail-border;
-
-//~110px
-
-$fa-font-path: if($bootstrap-sass-asset-helper, "fontawesome/", "../fonts/font-awesome/") !default;
-
-$padding-xlarge-vertical: 15px !default;
-$padding-xlarge-horizontal: 21px !default;
-
-$padding-xxlarge-vertical: 15px !default;
-$padding-xxlarge-horizontal: 21px !default;
-
-$line-height-xlarge: 1.2 !default;
-$border-radius-xlarge: 8px !default;
-
-$line-height-xxlarge: 1.2 !default;
-$border-radius-xxlarge: 10px !default;
-
-$navbar-inverse-color: $black;
-$navbar-inverse-bg: #f1f1f1 !default;
-$navbar-default-bg: #f1f1f1 !default;
-
-$navbar-inverse-active-bg-image: "/img/navbar-active-white-item.png";
-
-// Navbar Button
-$navbar-btn-color: $gray-light !default;
-$navbar-btn-bg: $navbar-inverse-bg !default;
-$navbar-btn-border: darken($navbar-btn-bg, 30%) !default;
-$navbar-btn-active-bg: red;
-$navbar-btn-active-color: white;
-
-$navbar-inverse-link-hover-color: #222222 !default;
-$navbar-inverse-brand-color: $black !default;
+            }
+        }
+        > .disabled > a {
+            &,
+            &:hover,
+            &:focus {}
+        }
+    }
+}

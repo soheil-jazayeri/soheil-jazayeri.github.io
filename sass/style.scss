@@ -1,30 +1,56 @@
 @import "bootstrap";
+
 @import "SassMQ/mq";
 
 @import "fontawesome/font-awesome";
 
 $mq-responsive: true;
+
 $mq-show-breakpoints: mobile, mobileLandscape, tablet, desktop, wide;
 
 /* make sidebar nav vertical */
-@media (min-width: 768px) {
-    .sidebar-nav .navbar .navbar-collapse {
-        padding: 0;
-        max-height: none;
+
+//@media (min-width: 768px) {
+//    .col-sm-9 {
+//        margin-left: 0px;
+//    }
+//    .sidebar-nav .navbar .navbar-collapse {
+//        padding: 0;
+//        max-height: none;
+//    }
+//    .sidebar-nav .navbar ul {
+//        float: none;
+//    }
+//    .sidebar-nav .navbar ul:not {
+//        display: block;
+//    }
+//    .sidebar-nav .navbar li {
+//        float: none;
+//        display: block;
+//    }
+//    .sidebar-nav .navbar li a {
+//        padding-top: 12px;
+//        padding-bottom: 12px;
+//    }
+//}
+
+.affix {
+    @include mq($from: $screen-sm-min) {
+        position: fixed;
     }
-    .sidebar-nav .navbar ul {
-        float: none;
+
+    @include mq($to: $screen-sm-min) {
+        position: relative;
     }
-    .sidebar-nav .navbar ul:not {
-        display: block;
+}
+
+.body {
+    @include mq($from: $screen-sm-min) {
+        padding-top: 0px;
     }
-    .sidebar-nav .navbar li {
-        float: none;
-        display: block;
-    }
-    .sidebar-nav .navbar li a {
-        padding-top: 12px;
-        padding-bottom: 12px;
+
+    @include mq($to: $screen-sm-min) {
+        //        padding-top: 50px;
     }
 }
 
@@ -42,6 +68,21 @@ $mq-show-breakpoints: mobile, mobileLandscape, tablet, desktop, wide;
     }
 }
 
+.col-sm-3 .col-md-2 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-sm-8 .col-md-9 {
+    @include mq($to: $screen-xs-max) {
+        margin-left: 0px;
+    }
+
+    @include mq($from: $screen-sm-min) {
+        margin-left: 10px;
+    }
+}
+
 .col-xs-4 {
     @include mq($to: $screen-xs-max) {
         padding-left: $grid-gutter-width / 2 - 5;
@@ -54,55 +95,16 @@ $mq-show-breakpoints: mobile, mobileLandscape, tablet, desktop, wide;
     }
 }
 
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .divider {
     border-bottom: 1px solid $table-border-color;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
-}
-
-.fa-4x {
-    @include mq($to: $screen-xs-max) {
-        font-size: $font-4x-screen-xs-min;
-    }
-
-    @include mq($from: $screen-sm-min) {
-        font-size: $font-4x-screen-sm-min;
-    }
-
-    @include mq($from: $screen-md-min) {
-        font-size: $font-4x-screen-md-min;
-    }
-
-    @include mq($from: $screen-lg-min) {
-        font-size: $font-4x-screen-lg-min;
-    }
-}
-
-.fa-5x {
-    @include mq($to: $screen-xs-max) {
-        font-size: $font-5x-screen-xs-min;
-    }
-
-    @include mq($from: $screen-sm-min) {
-        font-size: $font-5x-screen-sm-min;
-    }
-
-    @include mq($from: $screen-md-min) {
-        font-size: $font-5x-screen-md-min;
-    }
-
-    @include mq($from: $screen-lg-min) {
-        font-size: $font-5x-screen-lg-min;
-    }
-}
-
-.fr {
-    float: right;
-}
-
-.fl {
-    float: left;
 }
 
 .empty-column {
@@ -150,6 +152,24 @@ $mq-show-breakpoints: mobile, mobileLandscape, tablet, desktop, wide;
 }
 
 .link-regular > i {}
+
+.navbar-default {
+    //$navbar-default-bg: transparent;
+    //$navbar-default-border: transparent;
+    @include mq($from: $screen-sm-min) {
+        //        background-color: $navbar-default-bg;
+        //        border-color: $navbar-default-border;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    @include mq($to: $screen-sm-min) {
+        background-color: $navbar-default-bg;
+        border-color: $navbar-default-border;
+        //        background-color: transparent;
+        //        border-color: transparent;
+    }
+}
 
 .row-fluid {
     //    margin-left: 10%;
@@ -206,7 +226,7 @@ $mq-show-breakpoints: mobile, mobileLandscape, tablet, desktop, wide;
     }
 }
 
-.thumbnail img {
+.img-thumbnail {
     @include mq($to: $screen-xs-max) {
         min-height: $thumbnail-height-xs;
         height: $thumbnail-height-xs;

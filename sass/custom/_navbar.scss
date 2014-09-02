@@ -2,14 +2,22 @@
 
 .navbar {
     margin-bottom: 0px;
-    position: fixed !important;
+    //    position: fixed !important;
+    border: 0px;
 }
 
 .navbar-brand {
     font-size: $font-size-xxxlarge;
 }
 
+.nav-collapse {
+    padding-top: 1em;
+}
+
 .navbar-default {
+    .navbar-collapse {
+        padding-left: 0px;
+    }
     .navbar-brand {
         color: $navbar-inverse-brand-color;
         &:hover,
@@ -20,11 +28,11 @@
 
         }
     }
-    .navbar-nav {
+    .nav-stacked {
         > li > a {
+            color: $navbar-inverse-brand-color;
             &:hover,
             &:focus {
-                //                color: $navbar-inverse-link-hover-color;
                 background-color: $navbar-inverse-link-hover-bg;
                 text-decoration: underline;
             }
@@ -38,10 +46,9 @@
                 //                border-color: #000;
                 //                border: none;
                 //                color: $navbar-inverse-link-disabled-color;
-                                background-color: $navbar-inverse-link-disabled-bg;
-                                background-image: url($navbar-inverse-active-bg-image);
-                                background-position: center bottom;
-                                background-repeat: no-repeat;
+                //                background-color: $navbar-inverse-link-disabled-bg;
+                //                background-position: center bottom;
+                //                background-repeat: no-repeat;
 
             }
         }
